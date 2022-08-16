@@ -6,6 +6,7 @@ const currentDisplayNumber = document.querySelector(".currentNumber");
 const previousDisplayNumber = document.querySelector(".previousNumber");
 // query all the buttons and such
 const equal = document.querySelector(".equal");
+equal.addEventListener("click",calculate); // event listener to call calculate
 const numberButtons= document.querySelectorAll(".number");
 const clear = document.querySelector(".clear")
 const operators = document.querySelectorAll(".operator");
@@ -23,32 +24,32 @@ function handleNum(number) {
     }      
 }
 
-operators.forEach((btn) => { //an event listener to call the handleOper function when a operator is clicked
+operators.forEach((btn) => { //an event listener to call the handleOperator function when a operator is clicked
     btn.addEventListener("click", (e) => { 
         handleOperator(e.target.textContent);
     });
 });
 
 function handleOperator(op){
-    operator=op;
+    operator = op;
     previousNum=currentNum;
-    previousDisplayNumber.textContent = previousNum + operator;
-    currentNum="";
-    currentDisplayNumber.textContent="";
+    previousDisplayNumber.textContent = previousNum + " " + operator;
+    currentNum = "";
+    currentDisplayNumber.textContent = "";
 }
 
 
-    clear.addEventListener("click", (e) => { 
-       clearCalculator();
-    });
 
 
-function calculate(){
-
-}
-
-function clearCalculator(){
-    currentNum = ""; //empty  
-    previousNum = ""; //empty 
-    operator = ""; //empty 
-}
+ function calculate(){
+    previousNum = Number(previousNum);
+    currentNum = Number(currentNum);
+   switch(operator){ //switch statement to handle different opperators
+    case "+":
+        previousNum+=currentNum;
+    case "x":
+        previousNum*=currentNum;
+   }
+      previousDisplayNumber.textContent=""
+      currentDisplayNumber.textContent=previousNum;
+  }
