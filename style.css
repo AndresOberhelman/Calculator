@@ -1,10 +1,14 @@
-
+body{
+    background-color: rgb(201, 123, 5);
+}
 .operator,.number,.clear,.equal{
     padding:10px;
     margin: 5px;
     border-radius: 10px;
-
+    border: 0;
 }
+
+
 .number:hover{
     background-color: green;
 }
@@ -24,10 +28,13 @@
 .operator{
     background-color: blue;
     color: white;
+    align-items: center;
+    width: 30px;
 }
 .equal{
     background-color: blue;
     color: white;
+    width: 30px;
 }
 .clear{
     background-color: aqua;
@@ -52,8 +59,6 @@ background-color:cadetblue;
 .number{
     background-color:rgb(170, 165, 165);
     color: white;
-    
-    
 }
 
 .output{
