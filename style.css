@@ -1,0 +1,27 @@
+
+.operator,.number,.clear,.equal{
+    padding:10px;
+    
+}
+
+.CalculatorBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+        
+}
+
+.outline{
+outline-style: solid;
+padding: 20px;
+border-radius: 10px;
+}
+
+.number{
+    background-color:rgb(170, 165, 165);
+    color: white;
+    outline-style:none ;
+    
+}
