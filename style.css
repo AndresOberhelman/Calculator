@@ -1,27 +1,66 @@
 
 .operator,.number,.clear,.equal{
     padding:10px;
-    
+    margin: 5px;
+    border-radius: 10px;
+
+}
+.number:hover{
+    background-color: green;
 }
 
+.operator:hover{
+    background-color: green;
+}
+
+.clear:hover{
+    background-color: green;
+}
+
+.equal:hover{
+    background-color: green;
+}
+
+.operator{
+    background-color: blue;
+    color: white;
+}
+.equal{
+    background-color: blue;
+    color: white;
+}
+.clear{
+    background-color: aqua;
+}
 .CalculatorBody{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
-        
+    padding-top: 100px; 
 }
+
+
 
 .outline{
 outline-style: solid;
 padding: 20px;
 border-radius: 10px;
+background-color:cadetblue;
 }
 
 .number{
     background-color:rgb(170, 165, 165);
     color: white;
-    outline-style:none ;
+    
     
 }
+
+.output{
+    outline: solid;
+    border-radius: 5px;
+    margin: 7px;
+    padding: 5px;
+    background-color: rgb(197, 192, 192);
+}
+
